@@ -1,0 +1,61 @@
+#hello-meme-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: #000000;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.03);
+  transition: opacity 200ms ease, transform 200ms ease;
+  overflow: hidden;
+}
+
+#hello-meme-overlay.hello-meme-show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.hello-meme-frame-shell {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hello-meme-iframe {
+  position: absolute;
+  left: -13vw;
+  top: -13vh;
+  width: calc(100% + 26vw);
+  height: calc(100% + 26vh);
+  border: 0;
+  background: #000000;
+  pointer-events: none;
+}
+
+.hello-meme-mask {
+  position: absolute;
+  background: #000000;
+  pointer-events: none;
+}
+
+.hello-meme-mask-top-left {
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 90px;
+}
+
+.hello-meme-mask-top-right {
+  right: 0;
+  top: 0;
+  width: 260px;
+  height: 90px;
+}
+
+.hello-meme-mask-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 68px;
+}
